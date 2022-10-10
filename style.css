@@ -1,3 +1,7 @@
+* {
+    border:2px solid red;
+}
+
 body {
 
     box-sizing: border-box;
@@ -6,22 +10,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .calcBox {
 
     border:5px solid pink;
-    width:50vw;
+    background-color: rgb(204, 195, 195);
+    width:80vw;
     height:65vh;
     display:flex;
     flex-direction: column;
-    
     text-align: center;
     
     
+    
 }
 
-.calcBox {
+.calcTitle {
 
+   margin-top: 1%;
+    border-bottom:5px solid black;
     font-size: 1 rem;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left:2px solid black;
+    padding:5px;
 }
+
+.titleContainer {
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
+}
+
