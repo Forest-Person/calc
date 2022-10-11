@@ -10,9 +10,8 @@ html {
 
 body {
 
-    box-sizing: border-box;
-    width: 90vw;
-    height:90vh;
+  
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,15 +22,24 @@ body {
 
     border:5px solid pink;
     background-color: rgb(204, 195, 195);
-    width:80vw;
-    height:65vh;
+    
     display:flex;
     flex-direction: column;
     text-align: center;
     
     
     
+    
 }
+
+.titleContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    }
 
 .calcTitle {
 
@@ -42,15 +50,15 @@ body {
     border-right: 2px solid black;
     border-left:2px solid black;
     padding:5px;
+    
 }
 
-.titleContainer {
-
-display: flex;
-justify-content: center;
-align-items: center;
 
 
-
+.numbersDisplay{
+margin-top: 1%;
+    font-size: 3rem;
+    flex:1;
+    box-sizing: border-box;
+    
 }
-
