@@ -66,8 +66,7 @@ margin-top: 1%;
 
 .numberBox {
 
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
+    
     
     font-size: 3rem;
     
@@ -79,6 +78,57 @@ margin-top: 1%;
     grid-template-columns:1fr 1fr 1fr 1fr;
     padding-bottom: 1em;
     
+}
+
+.multiplySign {
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    
+}
+
+.divideSign {
+
+    grid-row-start:2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.minusSign {
+    grid-row-start:3;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+}
+
+.plusSign {
+
+    grid-row-start:4;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+}
+
+.equalSign {
+
+    grid-row-start:4;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+}
+
+.num0 {
+    grid-row-start:4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
 }
 
 
