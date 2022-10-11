@@ -23,10 +23,10 @@ body {
     border:5px solid pink;
     background-color: rgb(204, 195, 195);
     
-    display:flex;
     
-    flex-direction: column;
-    text-align: center;
+    
+    
+    
     
     
     
@@ -39,6 +39,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0%;
     
     }
 
@@ -60,7 +61,7 @@ body {
 .numbersDisplay{
 margin-top: 1%;
     font-size: 3rem;
-    
+    margin-bottom: 1%;
     
     
 }
