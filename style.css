@@ -45,6 +45,7 @@ body {
 .calcTitle {
 
    margin-top: 1%;
+   margin-bottom: 1%;
     border-bottom:5px solid black;
     font-size: 22 rem;
     border-top: 2px solid black;
@@ -60,7 +61,7 @@ body {
 margin-top: 1%;
     font-size: 3rem;
     
-    box-sizing: border-box;
+    
     
 }
 
@@ -76,7 +77,7 @@ margin-top: 1%;
 
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
-    padding-bottom: 1em;
+    
     
 }
 
