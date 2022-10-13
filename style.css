@@ -69,12 +69,13 @@ grid-template-columns: 3fr 1fr;
 
 .numbersDisplay{
 margin-top: 1%;
-    font-size: 3rem;
+    font-size: 3em;
     margin-bottom: 1%;
     color:white;
     background-color: black;
     border: 5px solid white;
     padding: 5px;
+    height:1em;
     
     
     
