@@ -5,7 +5,7 @@ html {
     justify-content: center;
 }
 * {
-    border:2px solid red;
+    /*border:2px solid red;*/
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 
 .calcBox {
 
-    border:5px solid pink;
+    border:5px solid rgb(24, 22, 22);
     background-color: rgb(204, 195, 195);
     
     
@@ -35,12 +35,21 @@ body {
 
 .titleContainer {
 
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 0%;
+    text-align: center;
     
+    }
+
+    .clearButtonDiv {
+display: grid;
+grid-template-columns: 3fr 1fr;
+        
+        
     }
 
 .calcTitle {
@@ -64,6 +73,8 @@ margin-top: 1%;
     margin-bottom: 1%;
     color:white;
     background-color: black;
+    border: 5px solid white;
+    padding: 5px;
     
     
     
@@ -72,7 +83,7 @@ margin-top: 1%;
 .numberBox {
 
     
-    
+    border: 4px solid rgb(101, 100, 100);
     font-size: 3rem;
     
 }
