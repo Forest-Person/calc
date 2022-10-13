@@ -2,8 +2,6 @@ let display = document.querySelector('.numbersDisplay')
 
 let clearDisplay = document.querySelector(".clearDisplay")
 
-
-
 let withoutCommas;
 
 let displayVar = []
@@ -16,14 +14,14 @@ displayVar.push(0)
 displayVar.join('')
 newValue = displayVar.toString()
 withoutCommas = newValue.replace(/,/g, '');
-if(withoutCommas.length >= 15){return}
 
-  else  {display.textContent = withoutCommas}
 
+display.textContent = withoutCommas
 })
 
 clearDisplay.addEventListener('click', function(e)
 {
 withoutCommas = ''
 display.textContent = ''
+displayVar = []
 })
