@@ -15,7 +15,7 @@ displayVar.join('')
 newValue = displayVar.toString()
 withoutCommas = newValue.replace(/,/g, '');
 
-
+if (withoutCommas.length >= 15) {return}
 display.textContent = withoutCommas
 })
 
