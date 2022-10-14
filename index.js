@@ -1,30 +1,23 @@
 let display = document.querySelector('.numbersDisplay')
 
-
-
 let clearDisplay = document.querySelector(".clearDisplay")
 
-let withoutCommas = '';
+let symbolButton = document.querySelectorAll('.symbols')
 
-let displayVar = []
-
-let num0 = document.querySelector('.num0')
-
-num0.addEventListener('click', function(item) { //event listener to add zeros to numbers display
+symbolButton.forEach((item)=>
+item.addEventListener('click', function(e) { //event listener to add zeros to numbers display
 
 
-display.value += 0
+return display.value += e.target.textContent
 
 
-
-
-
-
-})
+}))
 
 clearDisplay.addEventListener('click', function(e)  //event listener to clear the numbers display
 {
-withoutCommas = ''
+
 display.value = ''
-displayVar = []
+
 })
+
+
