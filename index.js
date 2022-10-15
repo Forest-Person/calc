@@ -29,7 +29,7 @@ multiplySign.style.cssText = "background-color:aqua-marine;"
 
 
 
-let operatorBeingUsed = ''
+let operatorBeingUsed = '';
 
 let var1 = 0;
 
@@ -37,11 +37,15 @@ let var2 = 0;
 
 let totalValue = 0;
 
+let answer = '';
+
 
 
 let plusSign = document.querySelector('.plusSign')
 plusSign.addEventListener('click', function(){  //Eventlister which updates var1 value and remove display.value
                                                 //creates string flag and makes the operator button red to signal usage
+
+
 var1 = display.value
 display.value = ''
 operatorBeingUsed = plusSign.textContent
@@ -94,7 +98,13 @@ equalSign.addEventListener('click', function(item) {
 
     if(operatorBeingUsed == '+') 
     
-    {totalValue = Number(var1) + Number(var2)}
+    {totalValue = Number(var1) + Number(var2)
+        
+       
+        
+        
+        
+    }
 
     if(operatorBeingUsed == '-')
 
@@ -115,8 +125,9 @@ equalSign.addEventListener('click', function(item) {
      display.value = totalValue
 
 
-     var1 = ''
-     var2 = ''
+     var1 = 0
+     
+     var2 = 0
     
      plusSign.style.cssText = "background-color:aqua-marine;"
      minusSign.style.cssText = "background-color:aqua-marine;"
