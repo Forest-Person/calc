@@ -23,6 +23,7 @@ plusSign.style.cssText = "background-color:aqua-marine;"
 minusSign.style.cssText = "background-color:aqua-marine;" ///resets the colors of the buttons of cleardisplay utton is pushed
 divideSign.style.cssText = "background-color:aqua-marine;"
 multiplySign.style.cssText = "background-color:aqua-marine;"
+previousValue = 0
 })
 
 
@@ -37,7 +38,7 @@ let var2 = 0;
 
 let totalValue = 0;
 
-let answer = '';
+let previousValue = 0;
 
 
 
@@ -45,12 +46,12 @@ let plusSign = document.querySelector('.plusSign')
 plusSign.addEventListener('click', function(){  //Eventlister which updates var1 value and remove display.value
                                                 //creates string flag and makes the operator button red to signal usage
 
+var1 = Number(display.value) + Number(previousValue)
 
-var1 = display.value
-display.value = ''
 operatorBeingUsed = plusSign.textContent
 plusSign.style.cssText = "background-color:red;"
-
+previousValue = Number(var1)
+display.value = ''
 
 })
 
@@ -96,11 +97,11 @@ equalSign.addEventListener('click', function(item) {
     
     var2 = display.value
 
+    
+
     if(operatorBeingUsed == '+') 
     
     {totalValue = Number(var1) + Number(var2)
-        
-       
         
         
         
@@ -125,9 +126,9 @@ equalSign.addEventListener('click', function(item) {
      display.value = totalValue
 
 
-     var1 = 0
+     var1 = ''
      
-     var2 = 0
+     var2 = ''
     
      plusSign.style.cssText = "background-color:aqua-marine;"
      minusSign.style.cssText = "background-color:aqua-marine;"
