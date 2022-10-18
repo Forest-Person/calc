@@ -23,7 +23,7 @@ plusSign.style.cssText = "background-color:aqua-marine;"
 minusSign.style.cssText = "background-color:aqua-marine;" ///resets the colors of the buttons of cleardisplay utton is pushed
 divideSign.style.cssText = "background-color:aqua-marine;"
 multiplySign.style.cssText = "background-color:aqua-marine;"
-previousValue = 0
+previousValue = ''
 })
 
 
@@ -36,15 +36,16 @@ let var1 = 0;
 
 let var2 = 0;
 
-let totalValue = 0;
+let totalValue = '';
 
-let previousValue = 0;
+let previousValue = '';
 
 
 
 let plusSign = document.querySelector('.plusSign')
 plusSign.addEventListener('click', function(){  //Eventlister which updates var1 value and remove display.value
                                                 //creates string flag and makes the operator button red to signal usage
+
 
 var1 = Number(display.value) + Number(previousValue)
 
@@ -58,21 +59,27 @@ display.value = ''
 let minusSign = document.querySelector('.minusSign')
 minusSign.addEventListener('click', function(){  //Eventlister which updates var1 value and remove display.value
     //creates string flag and makes the operator button red to signal usage
-var1 = display.value
-display.value = ''
+var1 = Number(previousValue) - Number(display.value) 
+if (previousValue == ''){var1 = Number(display.value)}
 operatorBeingUsed = minusSign.textContent
 minusSign.style.cssText = "background-color:red;"
-
+previousValue = Number(var1)
+display.value = ''
 
 })
+
+
 
 let divideSign = document.querySelector('.divideSign')
 divideSign.addEventListener('click', function(){  //Eventlister which updates var1 value and remove display.value
     //creates string flag and makes the operator button red to signal usage
-var1 = display.value
-display.value = ''
+    var1 = Number(previousValue) / Number(display.value) 
+    if (previousValue == ''){var1 = Number(display.value)}
+    
 operatorBeingUsed = divideSign.textContent
 divideSign.style.cssText = "background-color:red;"
+previousValue = Number(var1)
+display.value = ''
 
 
 })
@@ -80,7 +87,9 @@ divideSign.style.cssText = "background-color:red;"
 let multiplySign = document.querySelector('.multiplySign')
 multiplySign.addEventListener('click', function(){  //Eventlister which updates var1 value and remove display.value
     //creates string flag and makes the operator button red to signal usage
-var1 = display.value
+    var1 = Number(previousValue) * Number(display.value) 
+    if (previousValue == ''){var1 = Number(display.value)}
+    previousValue = Number(var1)
 display.value = ''
 operatorBeingUsed = multiplySign.textContent
 multiplySign.style.cssText = "background-color:red;"
@@ -101,11 +110,7 @@ equalSign.addEventListener('click', function(item) {
 
     if(operatorBeingUsed == '+') 
     
-    {totalValue = Number(var1) + Number(var2)
-        
-        
-        
-    }
+    {totalValue = Number(var1) + Number(var2)}
 
     if(operatorBeingUsed == '-')
 
@@ -134,7 +139,6 @@ equalSign.addEventListener('click', function(item) {
      minusSign.style.cssText = "background-color:aqua-marine;"
      divideSign.style.cssText = "background-color:aqua-marine;"
      multiplySign.style.cssText = "background-color:aqua-marine;"
-
+previousValue = ''
      
-
 })
