@@ -10,7 +10,7 @@ let equalSign = document.querySelector('.equalSign')
 
 let numbersArray = []
 
-let operatorArray = []
+let operatorArray = []q
 
 
 
