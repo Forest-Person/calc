@@ -85,7 +85,7 @@ margin-top: 1%;
     
 }
 
-.symbols {
+.numberSymbols {
 
     display:grid;
     grid-template-columns:1fr 1fr 1fr ;
@@ -93,7 +93,7 @@ margin-top: 1%;
     
 }
 
-.symbols button {
+.numberSymbols button {
 
     background-color:aliceblue;
 
@@ -106,6 +106,8 @@ margin-top: 1%;
     grid-column-end: 4;
 
 }
+
+
 
 .operands button {
 
