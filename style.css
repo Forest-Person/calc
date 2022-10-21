@@ -81,7 +81,7 @@ margin-top: 1%;
 .numberBox {
 
     display:grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2.8fr 1fr;
 }
 
 .numberSymbols button {
@@ -96,11 +96,15 @@ margin-top: 1%;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.num0 {
+
+    grid-column: 1/4;
+}
 
 
 .operands button {
 
-    background-color: aquamarine;
+    background-color: rgb(128, 235, 199);
 }
 
 
@@ -108,6 +112,12 @@ margin-top: 1%;
 
     display:grid;
     grid-template-rows: 1fr;
+}
+
+.equalSign {
+
+    background-color: rgb(14, 43, 110);
+    
 }
 
 button {
