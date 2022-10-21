@@ -25,7 +25,7 @@ item.addEventListener('click',function(e) {
 
     numbersArray.push(display.value)  //when an operator is clicked the value on the display is stored into this array
     console.log(numbersArray,operatorArray)
-     //if = sign splice out of the array
+     
     display.value = ''  //remove value from the display to make room for the next
 } ))
 
@@ -54,6 +54,11 @@ operatorArray.length = 0  ///put the values of both arrays back to 0 when the cl
 
 })
 
+equalSign.addEventListener('click', function(e){
+    numbersArray.push(display.value)
+    operate()
+    console.log(numbersArray,operatorArray)
+})
 
 function operate() {
 
@@ -64,10 +69,11 @@ function operate() {
 
 function Addition() {
 
-    total = numbersArray[0] + numbersArray[1]
-    numbersArray.pop(0)
-    numbersArray.pop(1)
-    return  total
+    total = Number(numbersArray[0]) + Number(numbersArray[1])
+    numbersArray.splice(0,2)
+    
+    operatorArray.shift()
+    return display.value = total
    }
 
    
