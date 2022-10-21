@@ -8,20 +8,21 @@ let operatorButton = document.querySelectorAll('.operands')
 
 let equalSign = document.querySelector('.equalSign')
 
-let numbersArray = []
+let numbersArray = [] //this will hold a record of past numbers put into display
 
-let operatorArray = []q
+let operatorArray = [] //this holds record of last operators used
 
 
 
 operatorButton.forEach( (item)=>
 item.addEventListener('click',function(e) {
 
-    operatorArray.push(e.target.textContent)
-    if(operatorArray[1] == '='){operatorArray.splice(1,1)}
-    numbersArray.push(display.value)
+    operatorArray.push(e.target.textContent)  //store operator used in array
+    
+    numbersArray.push(display.value)  //when an operator is clicked the value on the display is stored into this array
     console.log(numbersArray,operatorArray)
-    display.value = ''
+    if(operatorArray[1] == '='){operatorArray.splice(1,1)} //if = sign splice out of the array
+    else {display.value = ''}  //remove value from the display to make room for the next
 } ))
 
 
@@ -32,8 +33,8 @@ numberButton.forEach((item)=>
 item.addEventListener('click', function(e) { //event listener to add numbers to numbers display based on form input and textcontent added with event lsitener below
 
 
- display.value += e.target.textContent 
-display.value = Number(display.value)
+ display.value += e.target.textContent //put the text content of the number symbo onto the display
+display.value = Number(display.value) //change display text to number type
 
 
 }))
@@ -45,7 +46,7 @@ clearDisplay.addEventListener('click', function(e)  //event listener to clear th
 
 display.value = ''     //event listener to clear the display value and the numbers display that also deletes arrays for number symbols and operator symbols
 numbersArray.length = 0
-operatorArray.length = 0
+operatorArray.length = 0  ///put the values of both arrays back to 0 when the clear button is pressed
 
 })
 
@@ -64,3 +65,5 @@ function Addition() {
     numbersArray.pop(1)
     return  total
    }
+
+   

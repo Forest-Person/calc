@@ -5,7 +5,7 @@ html {
     justify-content: center;
 }
 * {
-    /*border:2px solid red;*/
+    border:2px solid red;
 }
 
 body {
@@ -76,21 +76,12 @@ margin-top: 1%;
     
 }
 
+
+
 .numberBox {
 
     display:grid;
-    border: 4px solid rgb(101, 100, 100);
-    font-size: 3rem;
     grid-template-columns: 3fr 1fr;
-    
-}
-
-.numberSymbols {
-
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr ;
-    
-    
 }
 
 .numberSymbols button {
@@ -99,12 +90,10 @@ margin-top: 1%;
 
 }
 
-.num0 {
-    grid-row-start:4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 4;
+.numberSymbols {
 
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
@@ -114,19 +103,20 @@ margin-top: 1%;
     background-color: aquamarine;
 }
 
+
+.operands {
+
+    display:grid;
+    grid-template-rows: 1fr;
+}
+
 button {
 
     font-size: 3rem;
     
 }
 
-.operands {
 
-display:grid;
-grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-
-
-}
 
 .clearButtonDiv button {
 
