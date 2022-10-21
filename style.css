@@ -4,9 +4,9 @@ html {
     display:flex;
     justify-content: center;
 }
-* {
+/* {
     border:2px solid red;
-}
+}*/
 
 body {
 
@@ -24,6 +24,7 @@ body {
     background-color: rgb(204, 195, 195);
     display: flex;
     flex-direction: column;
+    
 
 }
 
@@ -82,6 +83,7 @@ margin-top: 1%;
 
     display:grid;
     grid-template-columns: 2.8fr 1fr;
+    
 }
 
 .numberSymbols button {
@@ -116,7 +118,7 @@ margin-top: 1%;
 
 .equalSign {
 
-    background-color: rgb(14, 43, 110);
+    
     
 }
 

@@ -4,7 +4,7 @@ let clearDisplay = document.querySelector(".clearDisplay")
 
 let numberButton = document.querySelectorAll('.numberSymbols')
 
-let operatorButton = document.querySelectorAll('.operands')
+
 
 let equalSign = document.querySelector('.equalSign')
 
@@ -13,6 +13,9 @@ let numbersArray = [] //this will hold a record of past numbers put into display
 let operatorArray = [] //this holds record of last operators used
 
 
+
+
+let operatorButton = document.querySelectorAll('.operands')
 
 operatorButton.forEach( (item)=>
 item.addEventListener('click',function(e) {
@@ -26,7 +29,7 @@ item.addEventListener('click',function(e) {
 } ))
 
 
-
+console.log(operatorButton.length)
 
 
 numberButton.forEach((item)=>
