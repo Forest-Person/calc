@@ -15,21 +15,22 @@ let operatorArray = [] //this holds record of last operators used
 
 
 
-let operatorButton = document.querySelectorAll('.operands')
+const operatorButton = document.querySelectorAll('.operands')
 
 operatorButton.forEach( (item)=>
 item.addEventListener('click',function(e) {
+    if(e.target.classList.contains('equalSign')){return} //dont add equal sign to array
 
-    operatorArray.push(e.target.textContent)  //store operator used in array
-    
+    operatorArray.push(e.target.textContent)
+
     numbersArray.push(display.value)  //when an operator is clicked the value on the display is stored into this array
     console.log(numbersArray,operatorArray)
-    if(operatorArray[1] == '='){operatorArray.splice(1,1)} //if = sign splice out of the array
-    else {display.value = ''}  //remove value from the display to make room for the next
+     //if = sign splice out of the array
+    display.value = ''  //remove value from the display to make room for the next
 } ))
 
 
-console.log(operatorButton.length)
+
 
 
 numberButton.forEach((item)=>
