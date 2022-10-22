@@ -40,6 +40,8 @@ function operate() {
     for (let i = 0; i = operatorArray.length; i ++){
         if(operatorArray[0] == '+'){ display.value = Addition()}
         else if(operatorArray[0] == '-'){ display.value = Subtraction()}
+        else if(operatorArray[0] == 'x'){display.value = Multiplication()}
+        else if(operatorArray[0] == '/'){display.value = Division()}
     
         numbersArray.splice(0,2)
         
@@ -94,3 +96,16 @@ function Addition() {
 
    }
 
+function Multiplication() {
+    let total = Number(numbersArray[0]) * Number(numbersArray[1])
+    runningTotal = total
+    return display.value = total
+
+}
+
+function Division() {
+    let total = Number(numbersArray[0]) / Number(numbersArray[1])
+    runningTotal = total
+    return display.value = total
+
+}
