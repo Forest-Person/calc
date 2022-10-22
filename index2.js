@@ -61,19 +61,25 @@ equalSign.addEventListener('click', function(e){
 })
 
 function operate() {
-
+for (let i = 0; i = operatorArray.length; i ++)
     if(operatorArray[0] == '+'){return display.value = Addition()}
-
+    else if(operatorArray[0] == '-'){return display.value = Subtraction()}
     }
-
-
-function Addition() {
-
-    total = Number(numbersArray[0]) + Number(numbersArray[1])
     numbersArray.splice(0,2)
     
     operatorArray.shift()
+
+function Addition() {
+
+    let total = Number(numbersArray[0]) + Number(numbersArray[1])
+    
     return display.value = total
    }
 
-   
+   function Subtraction() {
+
+    let total = Number(numbersArray[0]) - Number(numbersArray[1])
+    
+    return display.value = total
+
+   }
