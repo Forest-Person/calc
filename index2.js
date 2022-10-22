@@ -19,18 +19,35 @@ const operatorButton = document.querySelectorAll('.operands')
 
 operatorButton.forEach( (item)=>
 item.addEventListener('click',function(e) {
+    
+    
     if(e.target.classList.contains('equalSign')){return} //dont add equal sign to array
 
-    operatorArray.push(e.target.textContent)
+    operatorArray.push(e.target.textContent) //push most recent pushed operator to operator array
 
     numbersArray.push(display.value)  //when an operator is clicked the value on the display is stored into this array
+   
+  
+    display.value = ''
     console.log(numbersArray,operatorArray)
      
-    display.value = ''  //remove value from the display to make room for the next
+    //display.value = ''  //remove value from the display to make room for the next
 } ))
 
+let runningTotal = ''
 
-
+function operate() {
+    for (let i = 0; i = operatorArray.length; i ++){
+        if(operatorArray[0] == '+'){ display.value = Addition()}
+        else if(operatorArray[0] == '-'){ display.value = Subtraction()}
+    
+        numbersArray.splice(0,2)
+        
+        operatorArray.shift()
+    
+        numbersArray.unshift(runningTotal)
+        }
+    }
 
 
 numberButton.forEach((item)=>
@@ -60,18 +77,11 @@ equalSign.addEventListener('click', function(e){
     console.log(numbersArray,operatorArray)
 })
 
-function operate() {
-for (let i = 0; i = operatorArray.length; i ++)
-    if(operatorArray[0] == '+'){return display.value = Addition()}
-    else if(operatorArray[0] == '-'){return display.value = Subtraction()}
-    }
-    numbersArray.splice(0,2)
-    
-    operatorArray.shift()
 
 function Addition() {
 
     let total = Number(numbersArray[0]) + Number(numbersArray[1])
+    runningTotal = total
     
     return display.value = total
    }
@@ -79,7 +89,8 @@ function Addition() {
    function Subtraction() {
 
     let total = Number(numbersArray[0]) - Number(numbersArray[1])
-    
+    runningTotal = total
     return display.value = total
 
    }
+
