@@ -4,8 +4,6 @@ let clearDisplay = document.querySelector(".clearDisplay")
 
 let numberButton = document.querySelectorAll('.numberSymbols')
 
-
-
 let equalSign = document.querySelector('.equalSign')
 
 let numbersArray = [] //this will hold a record of past numbers put into display
@@ -25,7 +23,7 @@ item.addEventListener('click',function(e) {
 
     operatorArray.push(e.target.textContent) //push most recent pushed operator to operator array
 
-    numbersArray.push(display.value)  //when an operator is clicked the value on the display is stored into this array
+    numbersArray.push(Number(display.value))  //when an operator is clicked the value on the display is stored into this array
    
   
     display.value = ''
@@ -35,6 +33,7 @@ item.addEventListener('click',function(e) {
 } ))
 
 let runningTotal = ''
+let previousTotal = ''
 
 function operate() {
     for (let i = 0; i = operatorArray.length; i ++){
@@ -42,12 +41,13 @@ function operate() {
         else if(operatorArray[0] == '-'){ display.value = Subtraction()}
         else if(operatorArray[0] == 'x'){display.value = Multiplication()}
         else if(operatorArray[0] == '/'){display.value = Division()}
-    
-        numbersArray.splice(0,2)
+    previousTotal = runningTotal
+        numbersArray.splice(0,2)//on each loop remove first two numbers in numbers array after operation
         
-        operatorArray.shift()
+        operatorArray.shift()//remove first operator in operatorarray in each loop
     
         numbersArray.unshift(runningTotal)
+        
         }
     }
 
@@ -74,14 +74,17 @@ operatorArray.length = 0  ///put the values of both arrays back to 0 when the cl
 })
 
 equalSign.addEventListener('click', function(e){
-    numbersArray.push(display.value)
+    numbersArray.push(Number(display.value))
+  
     operate()
+    numbersArray.shift()
     console.log(numbersArray,operatorArray)
 })
 
 
 function Addition() {
 
+    
     let total = Number(numbersArray[0]) + Number(numbersArray[1])
     runningTotal = total
     
@@ -105,6 +108,7 @@ function Multiplication() {
 
 function Division() {
     let total = Number(numbersArray[0]) / Number(numbersArray[1])
+    
     runningTotal = total
     return display.value = total
 
