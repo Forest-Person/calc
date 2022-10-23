@@ -2,6 +2,8 @@ let display = document.querySelector('.numbersDisplay')
 
 let clearDisplay = document.querySelector(".clearDisplay")
 
+let delKey = document.querySelector('.backspace')
+
 let numberButton = document.querySelectorAll('.numberSymbols')
 
 let equalSign = document.querySelector('.equalSign')
@@ -54,7 +56,9 @@ function operate() {
 
 numberButton.forEach((item)=>
 item.addEventListener('click', function(e) { //event listener to add numbers to numbers display based on form input and textcontent added with event lsitener below
-
+    //if (display.value.length >= 12){
+      //display.style.cssText = "font-size:1rem;"}
+     // else{display.style.cssText = "font-size:3rem;"}
 
  display.value += e.target.textContent //put the text content of the number symbo onto the display
 display.value = Number(display.value) //change display text to number type
@@ -72,6 +76,20 @@ numbersArray.length = 0
 operatorArray.length = 0  ///put the values of both arrays back to 0 when the clear button is pressed
 
 })
+
+delKey.addEventListener('click', function() {
+
+let removeOne = display.value
+
+
+removeOne = removeOne.slice(0,-1)
+
+display.value = removeOne
+
+
+
+})
+
 
 equalSign.addEventListener('click', function(e){
     numbersArray.push(Number(display.value))
